@@ -19,8 +19,8 @@ before_script:
   - sudo dpkg -i msys2-base-i686-20150512-20150731.deb
   - msys2init
 #  - msys2run "pacman -S --needed --noconfirm gettext rsync"
-#  - msys2run "pacman -S --needed --noconfirm mingw-w64-i686-toolchain"
-#  - msys2run "pacman -S --needed --noconfirm mingw-w64-i686-libidn mingw-w64-i686-openssl mingw-w64-i686-pcre"
+  - msys2run "pacman -S --needed --noconfirm mingw-w64-i686-toolchain"
+  - msys2run "pacman -S --needed --noconfirm mingw-w64-i686-libidn mingw-w64-i686-openssl mingw-w64-i686-pcre"
 
 language: c
 
