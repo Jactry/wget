@@ -18,7 +18,7 @@ before_script:
   - wget https://dl.dropboxusercontent.com/u/38458267/msys2/msys2-base-i686-20150512-20150731.deb
   - sudo dpkg -i msys2-base-i686-20150512-20150731.deb
   - msys2init
-#  - msys2run "pacman -S --needed --noconfirm gettext rsync"
+  - msys2run "pacman -S --needed --noconfirm gettext rsync"
   - msys2run "pacman -S --needed --noconfirm mingw-w64-i686-toolchain"
   - msys2run "pacman -S --needed --noconfirm mingw-w64-i686-libidn mingw-w64-i686-openssl mingw-w64-i686-pcre"
 
@@ -28,10 +28,4 @@ compiler:
   - gcc
 
 script:
-  - ls -all
-  - pwd
-  - mingw32run "ls -all"
-  - mingw32run "pwd"
-  - mingw32run "./bootstrap"
-  - mingw32run "./configure --target=mingw32 --host=mingw32 --build=mingw32 --with-ssl=openssl"
-  - mingw32run "make"
+  - ./.travis.sh
