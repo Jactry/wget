@@ -28,6 +28,10 @@ compiler:
   - gcc
 
 script:
+  - ls -all
+  - pwd
+  - mingw32 "ls -all"
+  - mingw32 "pwd"
   - mingw32run "./bootstrap"
   - mingw32run "./configure --target=mingw32 --host=mingw32 --build=mingw32 --with-ssl=openssl"
   - mingw32run "make"
