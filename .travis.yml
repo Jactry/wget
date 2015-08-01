@@ -28,4 +28,4 @@ compiler:
   - gcc
 
 script:
-  - ./.travis.sh
+  - mingw32run "build/Jactry/wget/.travis.sh"
